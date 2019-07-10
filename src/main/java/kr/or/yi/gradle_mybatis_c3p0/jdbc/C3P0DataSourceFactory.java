@@ -14,14 +14,13 @@ public class C3P0DataSourceFactory implements DataSourceFactory {
 	
 	@Override
 	public void setProperties(Properties props) {
-		dataSource=new ComboPooledDataSource();
+		dataSource = new ComboPooledDataSource();
 		dataSource.setPassword(props.getProperty("password"));
 		dataSource.setJdbcUrl(props.getProperty("url"));
 		dataSource.setUser(props.getProperty("username"));
 		try {
 			dataSource.setDriverClass(props.getProperty("driver"));
 		} catch (PropertyVetoException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -1,4 +1,4 @@
-package kr.or.yi.gradle_jdbc_study.ui.list;
+package kr.or.yi.gradle_mybatis_c3p0.ui.list;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
-import kr.or.yi.gradle_jdbc_study.dto.Title;
+import kr.or.yi.gradle_mybatis_c3p0.dto.Title;
 
 @SuppressWarnings("serial")
 public class TitleList extends JPanel {

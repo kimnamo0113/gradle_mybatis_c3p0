@@ -12,11 +12,10 @@ public class MyBatisSqlSessionFactory {
 	private static SqlSessionFactory sqlSessionFactory;
 	
 	private static SqlSessionFactory getSqlSessionFactory() {
-		if(sqlSessionFactory == null) {
-			try(InputStream is = Resources.getResourceAsStream("mybatis.xml")) {
+		if (sqlSessionFactory == null) {
+			try(InputStream is = Resources.getResourceAsStream("mybatis.xml")){
 				sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				throw new RuntimeException(e.getCause());
 			}
@@ -24,7 +23,7 @@ public class MyBatisSqlSessionFactory {
 		return sqlSessionFactory;
 	}
 	
-	public static SqlSession openSession() {
+	public static  SqlSession openSession() {
 		return getSqlSessionFactory().openSession();
 	}
 }

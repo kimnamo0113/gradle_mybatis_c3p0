@@ -1,4 +1,4 @@
-package kr.or.yi.gradle_jdbc_study.dto;
+package kr.or.yi.gradle_mybatis_c3p0.dto;
 
 public class Title {
 	private int titleNo;
