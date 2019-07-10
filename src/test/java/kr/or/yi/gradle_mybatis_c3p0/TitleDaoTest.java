@@ -1,7 +1,5 @@
 package kr.or.yi.gradle_mybatis_c3p0;
 
-import static org.junit.Assert.*;
-
 import java.util.List;
 
 import org.junit.AfterClass;
@@ -30,7 +28,7 @@ public class TitleDaoTest extends AbstractTest {
 	}
 
 	@Test
-	public void testSelectTitleByAll() {
+	public void test02SelectTitleByAll() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName()+"()");
 		List<Title> titleList = titleDao.selectTitleByAll();
 		Assert.assertNotNull(titleList);
@@ -38,6 +36,30 @@ public class TitleDaoTest extends AbstractTest {
 		for(Title t : titleList) {
 			log.debug(String.format("%d->%s%n", t.getTitleNo(),t.getTitleName()));
 		}
+	}
+	
+	@Test
+	public void test01InsertTitle() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName()+"()");
+		Title insertTitle = new Title(6, "인턴");
+		int res=titleDao.insertTitle(insertTitle);
+		log.debug("result = " + res);
+		Assert.assertEquals(1, res);
+	}
+	
+	@Test
+	public void test03UpdateTitle() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName()+"()");
+		Title updateTitle = new Title(6,"계약직");
+		int res=titleDao.updateTitle(updateTitle);
+		Assert.assertEquals(1, res);
+	}
+	@Test
+	public void test04DeleteTitle() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName()+"()");
+		Title deleteTitle = new Title(6);
+		int res=titleDao.deleteTitle(deleteTitle);
+		Assert.assertEquals(1, res);
 	}
 
 }
