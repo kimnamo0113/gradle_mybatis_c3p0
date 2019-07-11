@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.yi.gradle_mybatis_c3p0.dao.DepartmentDao">
+	<select id="selectDepartmentByAll" resultType="Department">
+		SELECT dept_code, dept_name, floor FROM mybatis_study.department;
+	</select>
+	<insert id="insertDepartment" parameterType="Department">
+		INSERT INTO mybatis_study.department
+		(dept_code, dept_name, floor)
+		VALUES(#{deptCode}, #{deptName}, #{floor});
+	</insert>
+	<delete id="deleteDepartment" parameterType="Department">
+		DELETE FROM mybatis_study.department
+		WHERE dept_code=#{deptCode};
+	</delete>
+	<update id="updateDepartment" parameterType="Department">
+		UPDATE mybatis_study.department
+		SET dept_name=#{deptName}, floor=#{floor}
+		WHERE dept_code=#{dept_code};
+	</update>
+	<select id="selectDepartmentByNo" parameterType="Department" resultType="Department">
+		SELECT dept_code, dept_name, floor 
+		FROM mybatis_study.department
+		WHERE dept_code=#{dept_code};
+	</select>
+</mapper>
