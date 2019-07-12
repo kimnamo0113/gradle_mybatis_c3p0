@@ -16,11 +16,11 @@
 	<update id="updateDepartment" parameterType="Department">
 		UPDATE mybatis_study.department
 		SET dept_name=#{deptName}, floor=#{floor}
-		WHERE dept_code=#{dept_code};
+		WHERE dept_code=#{deptCode};
 	</update>
 	<select id="selectDepartmentByNo" parameterType="Department" resultType="Department">
 		SELECT dept_code, dept_name, floor 
 		FROM mybatis_study.department
-		WHERE dept_code=#{dept_code};
+		WHERE dept_code=#{deptCode};
 	</select>
 </mapper>

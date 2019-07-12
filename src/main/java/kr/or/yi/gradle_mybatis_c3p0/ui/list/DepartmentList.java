@@ -29,9 +29,9 @@ public class DepartmentList extends AbstractList<Department>{
 	@Override
 	protected void tableAlignmentAndWidth() {
 		// 직책번호, 직책명은 가운데 정렬
-		tableCellAlignment(SwingConstants.CENTER, 0, 1);
+		tableCellAlignment(SwingConstants.CENTER, 0, 1, 2);
 		// 직책번호, 직책명의 폭을 (100, 200)으로 가능하면 설정
-		tableSetWidth(100, 200);
+		tableSetWidth(100, 200, 200);
 	}
 	@Override
 	protected Object[] toArray(int idx) {
@@ -41,6 +41,6 @@ public class DepartmentList extends AbstractList<Department>{
 
 	@Override
 	protected String[] getColumnNames() {
-		return new String[] { "직책번호", "직책명"};
+		return new String[] { "부서번호", "부서명","층"};
 	}
 }

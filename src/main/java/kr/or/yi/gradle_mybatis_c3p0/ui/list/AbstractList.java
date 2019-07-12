@@ -29,7 +29,7 @@ public abstract class AbstractList<T> extends JPanel {
 	}
 
 	private void initComponents(String title) {
-		setBorder(new TitledBorder(null, title, TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		setBorder(new TitledBorder(null, title+" 목록", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		setLayout(new BorderLayout(0, 0));
 
 		scrollPane = new JScrollPane();
