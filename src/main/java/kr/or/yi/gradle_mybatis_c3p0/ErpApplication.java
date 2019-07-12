@@ -40,6 +40,8 @@ public class ErpApplication extends JFrame implements ActionListener {
 		btnDepartment = new JButton("부서관리");
 		btnDepartment.addActionListener(this);
 		contentPane.add(btnDepartment);
+		
+		
 	}
 
 	public void actionPerformed(ActionEvent e) {

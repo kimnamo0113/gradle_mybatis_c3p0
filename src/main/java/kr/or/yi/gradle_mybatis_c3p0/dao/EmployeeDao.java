@@ -6,11 +6,9 @@ import kr.or.yi.gradle_mybatis_c3p0.dto.Employee;
 
 public interface EmployeeDao {
 	List<Employee> selectEmployeeByAll();
-	Employee selectEmployeeByNo(Employee employee);
-	int insertEmployee(Employee employee);
-	int deleteEmployee(Employee employee);
-	int updateEmployee(Employee employee);
+//	int insertEmployee(Employee Employee);
+//	int deleteEmployee(Employee Employee);
+//	int updateEmployee(Employee Employee);
+//	Employee selectEmployeeByCode(Employee Employee);
 	
-	//소속 부서별 사원
-	List<Employee> selectEmployeeByDno(int dno);
 }
